@@ -1,0 +1,52 @@
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordes más redondeados */
+  padding: 20px; /* Mayor padding para más espacio interno */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Permite que el contenido absoluto se posicione en relación con este contenedor */
+  overflow: hidden;
+  max-width: 300px; /* Establece un ancho máximo razonable */
+  width: 100%; /* Asegura que la tarjeta ocupe el ancho completo del contenedor padre */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+  margin: auto; /* Centra la tarjeta horizontalmente */
+}
+
+.service-image-container {
+  flex-grow: 1; /* Permite que la imagen ocupe el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+.service-info {
+  margin-top: auto; /* Empuja el contenido hacia la parte inferior del contenedor */
+  padding: 15px; /* Mayor padding para más espacio interno */
+  background-color: white; /* Fondo blanco para el contenido */
+  border-top: 1px solid #ddd;
+}
+
+.info-button {
+  margin-top: 15px; /* Espacio adicional arriba del botón */
+  padding: 15px; /* Mayor padding para un botón más grande */
+  border: none;
+  border-radius: 8px; /* Bordes redondeados para el botón */
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+  font-size: 16px; /* Aumenta el tamaño de la fuente del botón */
+}
+
+.info-button:hover {
+  background-color: #0056b3;
+}

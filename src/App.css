@@ -1,0 +1,128 @@
+/* App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header-item {
+  margin: 0 10px;
+}
+
+.search-bar {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto; /* Permite el desplazamiento vertical en el contenido principal */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el tamaño mínimo de las tarjetas */
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho máximo del contenedor de las tarjetas */
+  margin: 0 auto; /* Centra el contenedor de las tarjetas */
+}
+
+.service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordes más redondeados */
+  padding: 20px; /* Mayor padding para más espacio interno */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea el contenido al centro */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para mejorar el diseño */
+  transition: transform 0.3s, box-shadow 0.3s; /* Transiciones para efecto hover */
+}
+
+.service-card:hover {
+  transform: scale(1.03); /* Aumenta ligeramente el tamaño de la tarjeta al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al pasar el cursor */
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+.info-button {
+  margin-top: 15px; /* Espacio adicional arriba del botón */
+  padding: 15px; /* Mayor padding para un botón más grande */
+  border: none;
+  border-radius: 8px; /* Bordes redondeados para el botón */
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+  font-size: 16px; /* Aumenta el tamaño de la fuente del botón */
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+}
+
+.info-button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  flex-shrink: 0; /* Esto asegura que el footer se mantenga en la parte inferior */
+}

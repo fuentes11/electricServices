@@ -1,0 +1,92 @@
+.product-detail {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+  }
+  .product-detail2 {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .carousel-container {
+    max-width: 50%; /* Asegúrate de que el carrusel no exceda el ancho del contenedor */
+  }
+  
+  .carousel .carousel-slide img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 100px; /* Mantener la proporción de la imagen */
+    max-height: 400px; /* Limitar la altura máxima de las imágenes */
+    object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsionarse */
+  }
+  
+  .product-info {
+    margin-top: 20px;
+  }
+  
+  .product-name {
+    font-size: 2em;
+    margin: 0;
+    text-align: left;
+
+  }
+  .product-description{
+    font-size: 2em;
+    margin: 0;
+    text-align: left;
+
+  }
+  .product-price {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #007BFF;
+  }
+  
+  .add-to-cart {
+    margin-top: 20px;
+
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #0056b3;
+  }
+  
+  .tabs-container {
+    width: 100%;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+  }
+  
+  .tabs button.active {
+    border-bottom: 2px solid #007BFF;
+    font-weight: bold;
+  }
+  
+  .tab-content {
+    padding: 10px 0;
+  }
+  

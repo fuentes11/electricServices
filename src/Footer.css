@@ -1,0 +1,55 @@
+/* src/Footer.css */
+
+.footer {
+  background-color: #f8f9fa; /* Color de fondo claro para un estilo moderno */
+  color: #343a40; /* Texto en color gris oscuro */
+  padding: 40px 20px; /* Espaciado más amplio */
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+  max-width: 300px; /* Ancho máximo para las secciones */
+}
+
+.footer-section h4 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #007bff; /* Color de texto azul para los encabezados */
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  color: #ffffff; /* Color del ícono */
+  margin: 0 10px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.logo-section p {
+  font-size: 0.9em;
+  color: #6c757d; /* Color de texto gris para el pie de página */
+}

@@ -1,0 +1,234 @@
+/* Estilos para el contenedor principal de Mantenimiento */
+.mantenimiento-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 100%; /* Usa todo el ancho disponible */
+  margin: auto; /* Centra el contenedor */
+  background-color: #f9f9f9; /* Color de fondo suave para el contenedor */
+  border-radius: 8px; /* Bordes redondeados para el contenedor */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenedor */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para el botón de creación */
+.mantenimiento .btn-create {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  display: inline-block; /* Alineación en línea para el botón */
+}
+#mantenimientoservicio{
+  margin-left: 20px;
+
+}
+.mantenimiento .btn-create:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilo para la lista de servicios */
+.mantenimiento .services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Centra los ítems en la lista */
+  margin-top: 20px; /* Espacio arriba de la lista */
+  width: 100%; /* Asegura que la lista use todo el ancho disponible */
+}
+
+/* Estilo para cada tarjeta de servicio */
+.mantenimiento .service-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px;
+  width: 100%;
+  max-width: 300px; /* Limita el ancho máximo de las tarjetas */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff; /* Fondo blanco para las tarjetas */
+  transition: transform 0.3s ease; /* Transición suave para la animación */
+}
+
+.mantenimiento .service-card:hover {
+  transform: scale(1.02); /* Escala ligera al pasar el cursor */
+}
+
+/* Estilo para la imagen del servicio */
+.mantenimiento .service-image {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la información del servicio */
+.mantenimiento .service-info {
+  text-align: center;
+}
+
+/* Estilos para los botones de editar y eliminar */
+.mantenimiento .btn-edit, .mantenimiento .btn-delete {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin: 5px;
+}
+
+.mantenimiento .btn-edit:hover {
+  background-color: #0056b3;
+}
+
+.mantenimiento .btn-delete {
+  background-color: #dc3545;
+}
+
+.mantenimiento .btn-delete:hover {
+  background-color: #c82333;
+}
+
+/* Estilo para el formulario de servicio */
+.mantenimiento .service-form {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff; /* Fondo blanco para el formulario */
+  width: 100%;
+  max-width: 500px; /* Limita el ancho máximo del formulario */
+}
+
+/* Estilo para los campos del formulario */
+.mantenimiento .service-form input, .mantenimiento .service-form textarea {
+  width: calc(100% - 22px); /* Ajuste del ancho para incluir el padding */
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+/* Estilo para los botones del formulario */
+.mantenimiento .service-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.mantenimiento .service-form button:hover {
+  background-color: #0056b3;
+}
+
+.mantenimiento .btn-cancel {
+  background-color: #6c757d;
+}
+
+.mantenimiento .btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+.mantenimiento .service-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Estilos para el overlay del modal */
+.overlay {
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el overlay */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center; /* Centrar verticalmente */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Estilos para el contenedor del modal */
+.modal {
+  background-color: #fff; /* Fondo blanco para el modal */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 90%; /* Asegura que el modal no sea demasiado ancho */
+  max-height: 90vh; /* Limita la altura del modal */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave alrededor del modal */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto; /* Permite el desplazamiento si el contenido es demasiado grande */
+}
+
+/* Estilos para el formulario dentro del modal */
+.service-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Estilos para los campos del formulario dentro del modal */
+.service-form input, .service-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Estilos para los botones del formulario */
+.service-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 2px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.service-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el botón de cancelar */
+.btn-cancel {
+  background-color: #7d6d6c;
+}
+
+.btn-cancel:hover {
+  background-color: #5a6268;
+}
+
+/* Estilos para el encabezado del modal */
+.service-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}

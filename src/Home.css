@@ -1,0 +1,71 @@
+/* Contenedor principal de contenido */
+.main-content {
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    display: flex;
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples filas si es necesario */
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+/* Contenedor de tarjetas de servicio */
+.service-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en múltiples filas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+}
+
+/* Estilos para las tarjetas de servicio */
+.service-card {
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Bordes más redondeados */
+    padding: 20px; /* Mayor padding para más espacio interno */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    max-width: 300px; /* Establece un ancho máximo para las tarjetas */
+    width: 100%; /* Asegura que la tarjeta ocupe el ancho completo del contenedor padre */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+    margin: 0 auto; /* Centra la tarjeta horizontalmente dentro de su contenedor */
+}
+
+.service-image-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+.service-info {
+    margin-top: auto; /* Empuja el contenido hacia la parte inferior del contenedor */
+    padding: 15px; /* Mayor padding para más espacio interno */
+    background-color: white; /* Fondo blanco para el contenido */
+    border-top: 1px solid #ddd;
+}
+
+.info-button {
+    margin-top: 15px; /* Espacio adicional arriba del botón */
+    padding: 15px; /* Mayor padding para un botón más grande */
+    border: none;
+    border-radius: 8px; /* Bordes redondeados para el botón */
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total del elemento */
+    font-size: 16px; /* Aumenta el tamaño de la fuente del botón */
+}
+
+.info-button:hover {
+    background-color: #0056b3;
+}

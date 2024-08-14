@@ -1,0 +1,75 @@
+/* src/Header.css */
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.header-item {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.header-item.title {
+  font-size: 2.0em; /* Tamaño de texto ajustado para "Mi Tienda" */
+  font-weight: bold; /* Hacer el texto más prominente */
+  cursor: pointer; /* Muestra una mano para indicar que es clickeable */
+  color: white; /* Asegura que el color del texto sea blanco */
+}
+
+.search-container {
+  flex: 1;
+}
+
+.search-bar {
+  height: 2em; /* Altura ajustada */
+  width: 100%;
+  max-width: 300px; /* Tamaño máximo */
+  padding: 0.5em; /* Ajuste del padding */
+  border-radius: 5px;
+  border: none;
+}
+
+.cart-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cart-image {
+  width: 2.5em; /* Tamaño ajustado */
+  height: auto;
+}
+
+.cart-count {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em; /* Tamaño del texto */
+}
