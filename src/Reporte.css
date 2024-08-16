@@ -45,8 +45,8 @@
   
   .filter-button {
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #caffbf;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -55,7 +55,7 @@
   }
   
   .filter-button:hover {
-    background-color: #0056b3;
+    background-color: #3fee1c;
   }
   
   .chart-container {
@@ -89,8 +89,8 @@
   }
   
   .report-table th {
-    background-color: #2b8a3e;
-    color: #fff;
+    background-color: #caffbf;
+    color: #000000;
     font-weight: 600;
   }
   
@@ -100,8 +100,8 @@
   
   .download-button {
     padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
+    background-color: #caffbf;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -111,7 +111,7 @@
   }
   
   .download-button:hover {
-    background-color: #218838;
+    background-color: #35f80e;
   }
   .buttons-container {
     margin-top: 20px;
@@ -119,8 +119,8 @@
   }
   
   .download-button {
-    background-color: #4CAF50; /* Color de fondo verde */
-    color: white; /* Color del texto blanco */
+    background-color: #caffbf; /* Color de fondo verde */
+    color: rgb(0, 0, 0); /* Color del texto blanco */
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -132,6 +132,6 @@
   }
   
   .download-button:hover {
-    background-color: #45a049; /* Color de fondo verde oscuro al pasar el cursor */
+    background-color: rgb(22, 251, 34); /* Color de fondo verde oscuro al pasar el cursor */
   }
   

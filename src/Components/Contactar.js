@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../DB/DB"; // Asegúrate de que la configuración de Firebase esté correctamente importada
-import { collection, query, where, getDocs, updateDoc, doc } from "firebase/firestore";
-import '../Contactar.css';
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
+import "../Contactar.css";
 
 const Contactar = () => {
   const [contactos, setContactos] = useState([]);
@@ -41,7 +48,9 @@ const Contactar = () => {
       await Promise.all(batch);
       alert("Contactos actualizados exitosamente");
       setContactos((prevContactos) =>
-        prevContactos.filter((contact) => !selectedContacts.includes(contact.id))
+        prevContactos.filter(
+          (contact) => !selectedContacts.includes(contact.id)
+        )
       );
       setSelectedContacts([]);
     } catch (error) {
@@ -65,17 +74,27 @@ const Contactar = () => {
                 onChange={() => handleCheckboxChange(contact.id)}
               />
               <div className="contact-info">
-                <h2>{contact.nombre} {contact.apellido}</h2>
-                <p><strong>Teléfono:</strong> {contact.telefono}</p>
-                <p><strong>Correo:</strong> {contact.correo}</p>
+                <h2>
+                  {contact.nombre} {contact.apellido}
+                </h2>
+                <p>
+                  <strong>Teléfono:</strong> {contact.telefono}
+                </p>
+                <p>
+                  <strong>Correo:</strong> {contact.correo}
+                </p>
                 <div className="items-list">
-                <p><strong>Correo:</strong></p>
+                  <p>
+                    <strong>Carrito:</strong>
+                  </p>
                   {contact.items.length > 0 ? (
                     <ul>
                       {contact.items.map((item) => (
                         <li key={item.id} className="item-details">
                           <span>{item.name}</span>
-                          <span>{item.quantity} x ${item.price}</span>
+                          <span>
+                            {item.quantity} x ${item.price}
+                          </span>
                           <span>= ${item.total}</span>
                         </li>
                       ))}
@@ -84,8 +103,9 @@ const Contactar = () => {
                     <p>No hay ítems en el carrito.</p>
                   )}
                 </div>
-                <p><strong>Subtotal:</strong> ${contact.subtotal}</p>
-
+                <p>
+                  <strong>Subtotal:</strong> ${contact.subtotal}
+                </p>
               </div>
             </div>
           ))

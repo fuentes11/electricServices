@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { db } from "./DB/DB"; // Asegúrate de que esta ruta sea correcta
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import ServiceCard from "./Components/ServiceCard";
-import './Home.css'; // Agrega tu archivo de estilos aquí
-
+import "./Home.css"; // Agrega tu archivo de estilos aquí
 
 function Home() {
   const [services, setServices] = useState([]);
@@ -11,15 +10,16 @@ function Home() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const servicesCollection = collection(db, 'Services');
-        const servicesSnapshot = await getDocs(servicesCollection);
-        const servicesList = servicesSnapshot.docs.map(doc => {
+        const servicesCollection = collection(db, "Services");
+        const q = query(servicesCollection, where("activo", "==", 1)); // Filtrar por activo = 1
+        const servicesSnapshot = await getDocs(q);
+        const servicesList = servicesSnapshot.docs.map((doc) => {
           const data = doc.data();
           return {
             id: doc.id,
             name: data.name,
-            image: data.images[0] || '', // Selecciona la primera imagen
-            description: data.description
+            image: data.images[0] || "", // Selecciona la primera imagen
+            description: data.description,
           };
         });
         setServices(servicesList);

@@ -14,8 +14,8 @@
 
 /* Estilo para el botón de creación */
 .mantenimiento .btn-create {
-  background-color: #007bff;
-  color: white;
+  background-color: #caffbf;
+  color: rgb(0, 0, 0);
   border: none;
   margin: 10px;
   padding: 12px 24px;
@@ -30,7 +30,7 @@
 
 }
 .mantenimiento .btn-create:hover {
-  background-color: #0056b3; /* Color más oscuro al pasar el cursor */
+  background-color: #6aff4c; /* Color más oscuro al pasar el cursor */
 }
 
 /* Estilo para la lista de servicios */
@@ -78,8 +78,8 @@
 
 /* Estilos para los botones de editar y eliminar */
 .mantenimiento .btn-edit, .mantenimiento .btn-delete {
-  background-color: #007bff;
-  color: white;
+  background-color: #caffbf;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 8px 16px;
   font-size: 14px;
@@ -90,11 +90,11 @@
 }
 
 .mantenimiento .btn-edit:hover {
-  background-color: #0056b3;
+  background-color: #6eff51;
 }
 
 .mantenimiento .btn-delete {
-  background-color: #dc3545;
+  background-color: #caffbf;
 }
 
 .mantenimiento .btn-delete:hover {
@@ -124,8 +124,8 @@
 
 /* Estilo para los botones del formulario */
 .mantenimiento .service-form button {
-  background-color: #007bff;
-  color: white;
+  background-color: #caffbf;
+  color: rgb(0, 0, 0);
   border: none;
   padding: 12px;
   font-size: 16px;
@@ -136,7 +136,7 @@
 }
 
 .mantenimiento .service-form button:hover {
-  background-color: #0056b3;
+  background-color: #4bfb27;
 }
 
 .mantenimiento .btn-cancel {
@@ -200,8 +200,8 @@
 
 /* Estilos para los botones del formulario */
 .service-form button {
-  background-color: #007bff;
-  color: white;
+  background-color: #caffbf;
+  color: rgb(0, 0, 0);
   border: none;
   margin: 2px;
   padding: 12px;
@@ -213,7 +213,7 @@
 }
 
 .service-form button:hover {
-  background-color: #0056b3;
+  background-color: #50ff2d;
 }
 
 /* Estilo para el botón de cancelar */

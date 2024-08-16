@@ -1,8 +1,8 @@
 /* src/Header.css */
 
 .header {
-  background-color: #333;
-  color: white;
+  background-color: #000000; /* Fondo gris oscuro para un contraste suave */
+  color: #fdffb6; /* Color amarillo pálido para el texto */
   padding: 10px 0;
   display: flex;
   flex-wrap: wrap;
@@ -24,10 +24,10 @@
 }
 
 .header-item.title {
-  font-size: 2.0em; /* Tamaño de texto ajustado para "Mi Tienda" */
-  font-weight: bold; /* Hacer el texto más prominente */
-  cursor: pointer; /* Muestra una mano para indicar que es clickeable */
-  color: white; /* Asegura que el color del texto sea blanco */
+  font-size: 2.0em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fdffb6; /* Mantiene el amarillo pálido para la prominencia */
 }
 
 .search-container {
@@ -35,12 +35,14 @@
 }
 
 .search-bar {
-  height: 2em; /* Altura ajustada */
+  height: 2em;
   width: 100%;
-  max-width: 300px; /* Tamaño máximo */
-  padding: 0.5em; /* Ajuste del padding */
+  max-width: 300px;
+  padding: 0.5em;
   border-radius: 5px;
-  border: none;
+  border: 2px solid #caffbf; /* Borde verde pálido para suavizar el contraste */
+  background-color: #fff; /* Fondo blanco para la barra de búsqueda */
+  color: #343a40; /* Texto gris oscuro para una buena legibilidad */
 }
 
 .cart-container {
@@ -55,21 +57,22 @@
 }
 
 .cart-image {
-  width: 2.5em; /* Tamaño ajustado */
+  width: 2.5em;
   height: auto;
+  filter: hue-rotate(50deg) brightness(1.2); /* Ajuste de color para armonizar con el esquema */
 }
 
 .cart-count {
   position: absolute;
   top: -0.5em;
   right: -0.5em;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: #fdffb6; /* Verde pálido para el fondo del contador */
+  color: #343a40; /* Texto gris oscuro para un buen contraste */
   border-radius: 50%;
   width: 1.5em;
   height: 1.5em;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.8em; /* Tamaño del texto */
+  font-size: 0.8em;
 }

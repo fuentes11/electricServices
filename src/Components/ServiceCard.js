@@ -10,11 +10,12 @@ function ServiceCard({ id, title, image }) {
   const handleMoreInfo = async () => {
     // Registra el clic en Firebase
     try {
-      const clicksCollection = collection(db, 'Clicks');
+      const clicksCollection = collection(db, "Clicks");
       await addDoc(clicksCollection, {
         serviceId: id,
         serviceName: title,
-        clickDate: Timestamp.fromDate(new Date()) // Fecha y hora actuales
+        clickDate: Timestamp.fromDate(new Date()), // Fecha y hora actuales
+        activo: 1,
       });
     } catch (error) {
       console.error("Error registering click: ", error);

@@ -1,10 +1,12 @@
 /* src/Footer.css */
 
 .footer {
-  background-color: #f8f9fa; /* Color de fondo claro para un estilo moderno */
-  color: #343a40; /* Texto en color gris oscuro */
-  padding: 40px 20px; /* Espaciado más amplio */
+  background-color: #fdffb6; /* Fondo amarillo pálido para un look suave y acogedor */
+  color: #343a40; /* Texto en color gris oscuro para un buen contraste */
+  padding: 10px 0;
   text-align: center;
+  flex-shrink: 0; /* Esto asegura que el footer se mantenga en la parte inferior */
+
 }
 
 .footer-container {
@@ -17,17 +19,18 @@
 .footer-section {
   flex: 1;
   margin: 10px;
-  max-width: 300px; /* Ancho máximo para las secciones */
+  max-width: 550px;
 }
 
 .footer-section h4 {
   margin-bottom: 15px;
   font-size: 1.2em;
-  color: #007bff; /* Color de texto azul para los encabezados */
+  color: #343a40; /* Encabezados en gris oscuro para coherencia */
 }
 
 .footer-section p {
   margin: 5px 0;
+  color: #6c757d; /* Texto en gris suave para una apariencia profesional */
 }
 
 .social-icons {
@@ -39,9 +42,10 @@
 .social-icon {
   width: 40px;
   height: 40px;
-  color: #ffffff; /* Color del ícono */
+  color: #343a40; /* Íconos en gris oscuro para contraste */
   margin: 0 10px;
   transition: transform 0.3s, opacity 0.3s;
+  border-radius: 50%;
 }
 
 .social-icon:hover {
@@ -50,6 +54,7 @@
 }
 
 .logo-section p {
-  font-size: 0.9em;
-  color: #6c757d; /* Color de texto gris para el pie de página */
+  width: 550;
+  font-size: 0.7em;
+  color: #343a40; /* Texto en gris oscuro para mantener la coherencia */
 }

@@ -29,11 +29,12 @@ body {
   flex-grow: 1;
 }
 
-header {
-  background-color: #333;
-  color: white;
+.header {
+  background-color: #000000; /* Fondo gris oscuro para un contraste suave */
+  color: #fdffb6; /* Color amarillo pálido para el texto */
   padding: 10px 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -107,8 +108,8 @@ header {
   padding: 15px; /* Mayor padding para un botón más grande */
   border: none;
   border-radius: 8px; /* Bordes redondeados para el botón */
-  background-color: #007BFF;
-  color: white;
+  background-color: #caffbf;
+  color: #343a40;
   cursor: pointer;
   width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
   font-size: 16px; /* Aumenta el tamaño de la fuente del botón */
@@ -116,13 +117,7 @@ header {
 }
 
 .info-button:hover {
-  background-color: #0056b3;
+  background-color: #a5fb94;
 }
 
-.footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  flex-shrink: 0; /* Esto asegura que el footer se mantenga en la parte inferior */
-}
+

@@ -5,7 +5,6 @@ import "../Header.css";
 import cartIcon from "../assets/shopping-cart2.png";
 import { GiShoppingCart } from "react-icons/gi";
 
-
 const Header = () => {
   const navigate = useNavigate();
   const { getCartCount } = useCart(); // Obtén el conteo de artículos en el carrito
@@ -22,20 +21,20 @@ const Header = () => {
     <header className="header">
       <div className="header-content">
         <div className="header-item title" onClick={handleTitleClick}>
-          Mi Tienda
+          Servielectric-sv
         </div>
-     {/* buscador   
+        {/* buscador   
      <div className="header-item">
           <input type="text" placeholder="Buscar..." className="search-bar" />
         </div>
-      */}  
+      */}
         <div className="header-item">
-        <span className="cart-icon" onClick={handleCartClick}>
-          <GiShoppingCart className="cart-image" />
-            <span className="cart-count">{getCartCount()}</span> {/* Muestra el contador */}
-          </span>         
+          <span className="cart-icon" onClick={handleCartClick}>
+            <GiShoppingCart className="cart-image" />
+            <span className="cart-count">{getCartCount()}</span>{" "}
+            {/* Muestra el contador */}
+          </span>
         </div>
-       
       </div>
     </header>
   );

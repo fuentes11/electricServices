@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../DB/DB";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import * as XLSX from "xlsx";
 import * as ExcelJS from "exceljs";
 import { saveAs } from "file-saver";
@@ -13,8 +13,8 @@ import {
   BarElement,
   Title,
   Tooltip,
-  Legend
-} from 'chart.js';
+  Legend,
+} from "chart.js";
 import "../Reporte.css";
 
 ChartJS.register(
@@ -35,7 +35,8 @@ function Reporte() {
   useEffect(() => {
     const fetchData = async () => {
       const clicksCollection = collection(db, "Clicks");
-      const clicksSnapshot = await getDocs(clicksCollection);
+      const q = query(clicksCollection, where("activo", "==", 1));
+      const clicksSnapshot = await getDocs(q);
       const clicksData = clicksSnapshot.docs.map((doc) => doc.data());
       setClicks(clicksData);
       setFilteredClicks(clicksData);
@@ -60,7 +61,9 @@ function Reporte() {
 
     const filtered = clicks.filter((click) => {
       const clickDate = click.clickDate.toDate(); // Asumiendo que clickDate es un Timestamp de Firestore
-      return (!startDate || clickDate >= start) && (!endDate || clickDate <= end);
+      const isDateInRange =
+        (!startDate || clickDate >= start) && (!endDate || clickDate <= end);
+      return isDateInRange && click.activo === 1;
     });
 
     setFilteredClicks(filtered);
@@ -69,8 +72,10 @@ function Reporte() {
   const downloadExcel = async (includeFilters) => {
     // Verificar si las fechas están vacías para ajustar el nombre del archivo
     const fileName = includeFilters
-      ? (startDate || endDate)
-        ? `Reporte_de_visitas_${startDate ? startDate.replace(/-/g, "") : "start"}_a_${endDate ? endDate.replace(/-/g, "") : "end"}.xlsx`
+      ? startDate || endDate
+        ? `Reporte_de_visitas_${
+            startDate ? startDate.replace(/-/g, "") : "start"
+          }_a_${endDate ? endDate.replace(/-/g, "") : "end"}.xlsx`
         : "Reporte_de_visitas_Historico.xlsx"
       : "Reporte_de_visitas_Historico.xlsx";
 
@@ -83,9 +88,9 @@ function Reporte() {
       return acc;
     }, {});
 
-    const formattedData = Object.keys(groupedClicks).map(serviceName => ({
+    const formattedData = Object.keys(groupedClicks).map((serviceName) => ({
       "Nombre del Servicio": serviceName,
-      "Número de visitas": groupedClicks[serviceName]
+      "Número de visitas": groupedClicks[serviceName],
     }));
 
     // Crear un archivo Excel con ExcelJS
@@ -97,19 +102,25 @@ function Reporte() {
 
     // Agregar datos
     formattedData.forEach((data) => {
-      worksheet.addRow([data["Nombre del Servicio"], data["Número de visitas"]]);
+      worksheet.addRow([
+        data["Nombre del Servicio"],
+        data["Número de visitas"],
+      ]);
     });
-
+    worksheet.columns = [
+      { key: "A", width: 20 }, // Columna A con un ancho de 20
+      { key: "B", width: 30 }, // Columna B con un ancho de 30
+    ];
     // Estilos básicos
-    worksheet.getCell('A1').fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      fgColor: { argb: 'aae0ac' }
+    worksheet.getCell("A1").fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "aae0ac" },
     };
-    worksheet.getCell('B1').fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      fgColor: { argb: 'aae0ac' }
+    worksheet.getCell("B1").fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "aae0ac" },
     };
 
     // Descargar el archivo Excel
@@ -127,10 +138,10 @@ function Reporte() {
     labels: Object.keys(groupedClicks),
     datasets: [
       {
-        label: "Número de Clicks",
+        label: "Número de visitas",
         data: Object.values(groupedClicks),
-        backgroundColor: "rgba(75, 192, 192, 0.6)",
-        borderColor: "rgba(75, 192, 192, 1)",
+        backgroundColor: "#fdffb6",
+        borderColor: "#000000",
         borderWidth: 1,
       },
     ],
@@ -183,7 +194,10 @@ function Reporte() {
         <button className="download-button" onClick={() => downloadExcel(true)}>
           Descargar Reporte
         </button>
-        <button className="download-button" onClick={() => downloadExcel(false)}>
+        <button
+          className="download-button"
+          onClick={() => downloadExcel(false)}
+        >
           Descargar Histórico
         </button>
       </div>

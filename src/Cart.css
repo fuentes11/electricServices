@@ -48,7 +48,7 @@
 
 .modal-content input:focus, 
 .modal-content textarea:focus {
-  border-color: #007bff;
+  border-color: #caffbf;
   outline: none;
 }
 
@@ -56,8 +56,8 @@
   padding: 12px;
   margin: 2px;
   font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
+  color: #000000;
+  background-color: #caffbf;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -65,14 +65,14 @@
 }
 
 .modal-content .submit-button:hover {
-  background-color: #0056b3;
+  background-color: #caffbf;
 }
 
 .modal-content .loader {
   margin-top: 20px;
   border: 4px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 4px solid #007bff;
+  border-top: 4px solid #caffbf;
   width: 30px;
   height: 30px;
   animation: spin 1s linear infinite;
@@ -165,12 +165,12 @@
 }
 
 .confirm-button {
-  background: #007bff;
-  color: #ffffff;
+  background: #caffbf;
+  color: #010101;
 }
 
 .confirm-button:hover {
-  background: #0056b3;
+  background: #caffbf;
 }
 
 .cancel-button {
@@ -268,7 +268,7 @@ h1 {
 .cart-item-price {
   font-size: 1.3em;
   margin: 5px 0;
-  color: #28a745;
+  color: #495057;
   font-weight: 500;
 }
 
@@ -281,8 +281,8 @@ h1 {
 .quantity-button {
   padding: 10px 15px;
   border: none;
-  background-color: #007bff;
-  color: white;
+  background-color: #caffbf;
+  color: rgb(0, 0, 0);
   border-radius: 6px;
   cursor: pointer;
   font-size: 1.1em;
@@ -294,7 +294,7 @@ h1 {
   margin-bottom: 5px;
 }
 .quantity-button:hover {
-  background-color: #0056b3;
+  background-color: #a5fc93;
 }
 
 .quantity-display {
@@ -340,18 +340,18 @@ h1 {
 
 .consult-button {
   width: 35%;
-  background: #007bff;
-  color: #ffffff;
+  background: #caffbf;
+  color: #000000;
 }
 
 .consult-button:hover {
-  background: #0056b3;
+  background: #95ff7f;
 }
 
 .clear-cart {
   width: 35%;
-  background: #ff5722;
-  color: #ffffff;
+  background: #caffbf;
+  color: #000000;
 }
 
 .clear-cart:hover {
