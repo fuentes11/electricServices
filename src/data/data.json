@@ -1,0 +1,32 @@
+{
+ "Header": 
+ {
+  "title": "Soluciones Integrales en Servicios Eléctricos, Construcción y Seguridad",
+  "paragraph": "Brindamos servicios profesionales en electricidad, construcción y seguridad para proteger y mejorar tu hogar o negocio. Nuestro equipo experto garantiza calidad, eficiencia y seguridad en cada proyecto, desde instalaciones eléctricas hasta sistemas de seguridad avanzados."
+}
+,
+  "About": {
+    "paragraph": "En Servielectric-sv, nos dedicamos a ofrecer soluciones eléctricas seguras y eficientes con un toque personal. Con años de experiencia y un equipo altamente capacitado, nos enorgullece ayudar a nuestros clientes a mantener sus hogares y negocios en funcionamiento. Valoramos la calidad, la seguridad y la honestidad en todo lo que hacemos.",
+   "Why": [
+  "Experiencia y calidad garantizada.",
+  "Soluciones a medida para cada cliente.",
+  "Compromiso con la seguridad y eficiencia.",
+  "Proyectos entregados a tiempo."
+],
+"Why2": [
+  "Profesionales certificados.",
+  "Atención personalizada.",
+  "Resultados duraderos.",
+  "Cumplimos tus expectativas."
+]
+
+  },
+  
+ 
+  "Contact": {
+    "phone": "+503 2253 1870",
+    "email": "servielectric-ventas@hotmail.com",
+    "facebook": "https://www.facebook.com/people/Servielectric/61564238347833/?mibextid=LQQJ4d",
+    "instagram": "https://www.instagram.com/servielectric_sv/"
+  }
+}

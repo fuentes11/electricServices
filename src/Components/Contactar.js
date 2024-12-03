@@ -8,7 +8,6 @@ import {
   updateDoc,
   doc,
 } from "firebase/firestore";
-import "../Contactar.css";
 
 const Contactar = () => {
   const [contactos, setContactos] = useState([]);
@@ -93,9 +92,9 @@ const Contactar = () => {
                         <li key={item.id} className="item-details">
                           <span>{item.name}</span>
                           <span>
-                            {item.quantity} x ${item.price}
+                            {item.quantity} x {item.price}
                           </span>
-                          <span>= ${item.total}</span>
+                          <span>= {item.total}</span>
                         </li>
                       ))}
                     </ul>
@@ -104,7 +103,7 @@ const Contactar = () => {
                   )}
                 </div>
                 <p>
-                  <strong>Subtotal:</strong> ${contact.subtotal}
+                  <strong>Cantidad total:</strong> {contact.subtotal}
                 </p>
               </div>
             </div>
