@@ -8,7 +8,7 @@ import { Gallery } from "./Components/gallery";
 import { Testimonials } from "./Components/testimonials";
 import { Contact } from "./Components/contact";
 import Mantenimiento from "./Components/mantenimientos/MantenimientoReporte"; // Asegúrate de tener este componente
-
+import Login from "./Components/mantenimientos/Login"
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
@@ -41,7 +41,9 @@ const App = () => {
             </div>
           }
         />
-        <Route path="/mantenimiento" element={<Mantenimiento />} />
+        <Route path="/mantenimiento" element={<Login/>} />
+        <Route path="/mantenimiento-reporte" element={<Mantenimiento />} />
+
       </Routes>
     </Router>
   );

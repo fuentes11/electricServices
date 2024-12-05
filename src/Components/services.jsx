@@ -184,7 +184,7 @@ export const Services = () => {
   const handleWhatsAppConsult = () => {
     if (!selectedService) return;
     const message = `Hola me gustaria realizar una cotizacion sobre este servicio:\n\nServicio: ${selectedService.name}`;
-    window.location.href = `https://wa.me/+50376407144?text=${encodeURIComponent(
+    window.location.href = `https://wa.me/+50374819876?text=${encodeURIComponent(
       message
     )}`;
   };

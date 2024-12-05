@@ -5,13 +5,13 @@ import { getStorage } from "firebase/storage";
 
 // Tu configuración de Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyDAkUMJVmhvTP_rHZC5S9JrNkXbTMlk5Fg",
-    authDomain: "electricservices-919b3.firebaseapp.com",
-    projectId: "electricservices-919b3",
-    storageBucket: "electricservices-919b3.appspot.com",
-    messagingSenderId: "254430779868",
-    appId: "1:254430779868:web:2515dcee70cbeb58fd1719",
-    measurementId: "G-JYJ1P5E904"
+  apiKey: "AIzaSyDg0l9_4zp_7rCOtwWyH0XLhENGK4nCu8Y",
+  authDomain: "hypercraft-753ae.firebaseapp.com",
+  projectId: "hypercraft-753ae",
+  storageBucket: "hypercraft-753ae.firebasestorage.app",
+  messagingSenderId: "73078138037",
+  appId: "1:73078138037:web:08b56071ef74848be28afc"
+    
   };
 
 // Inicializar Firebase
