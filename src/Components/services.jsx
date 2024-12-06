@@ -194,7 +194,7 @@ export const Services = () => {
     const emailBody = encodeURIComponent(
       `Hola me gustaria realizar una cotizacion sobre este servicio:\n\nServicio: ${selectedService.name}`
     );
-    window.location.href = `mailto:servielectric-ventas@hotmail.com?subject=Consulta de Servicio&body=${emailBody}`;
+    window.location.href = `mailto:jasonfuentes3025@gmail.com?subject=Consulta de Servicio&body=${emailBody}`;
   };
 
   const handleConsult = () => {
